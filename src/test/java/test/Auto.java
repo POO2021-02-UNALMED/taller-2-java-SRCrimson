@@ -9,9 +9,16 @@ public class Auto {
 	int registro;
 	static int cantidadCreados;
 
-	int cantidadAsientos() {
-		return this.asientos.length;
-		
+	public int cantidadAsientos() {
+		int cont = 0;
+		if (asientos != null) {
+			for (Asiento o : asientos) {
+				if (o != null) {
+					cont++;
+				}
+			}
+		}
+		return cont;
 	}
 	
 	String verificarIntegridad() {
